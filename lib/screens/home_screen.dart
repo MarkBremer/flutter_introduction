@@ -10,9 +10,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int counter = 0;
 
-  void incrementCounter() {
+  void incrementCounter(int p) {
     setState(() {
-      counter++;
+      counter += p;
+    });
+  }
+
+  void decrementCounter(int p) {
+    setState(() {
+      counter -= p;
     });
   }
 
@@ -43,10 +49,57 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            ElevatedButton(
-              onPressed: incrementCounter,
-              child: const Text("Increment"),
-            ),
+
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => incrementCounter(1),
+                      child: const Text("+1"),
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(70, 50)
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    ElevatedButton(
+                      onPressed: () => incrementCounter(10),
+                      child: const Text("+10"),
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(70, 50)
+                      ),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 12),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => decrementCounter(1),
+                      child: const Text("-1"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        fixedSize: const Size(70, 50)
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    ElevatedButton(
+                      onPressed: () => decrementCounter(10),
+                      child: const Text("-10"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        fixedSize: const Size(70, 50)
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
