@@ -16,6 +16,10 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+# Reddit Empfehlungen
+https://www.geeksforgeeks.org/flutter/flutter-tutorial/
+https://www.youtube.com/@createdbykoko
+https://www.youtube.com/@RivaanRanawat
 
 # lib/models
 Datenobjekte

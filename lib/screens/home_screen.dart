@@ -58,18 +58,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       onPressed: () => incrementCounter(1),
-                      child: const Text("+1"),
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(70, 50)
                       ),
+                      child: const Text("+1"),
                     ),
                     const SizedBox(width: 12),
                     ElevatedButton(
                       onPressed: () => incrementCounter(10),
-                      child: const Text("+10"),
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(70, 50)
                       ),
+                      child: const Text("+10"),
                     ),
                   ],
                 ),
@@ -81,20 +81,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     ElevatedButton(
                       onPressed: () => decrementCounter(1),
-                      child: const Text("-1"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         fixedSize: const Size(70, 50)
                       ),
+                      child: const Text("-1"),
                     ),
                     const SizedBox(width: 12),
                     ElevatedButton(
                       onPressed: () => decrementCounter(10),
-                      child: const Text("-10"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         fixedSize: const Size(70, 50)
                       ),
+                      child: const Text("-10"),
                     ),
                   ],
                 ),
